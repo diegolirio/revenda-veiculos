@@ -18,8 +18,9 @@ public class Versao {
 	@ManyToOne
 	private Modelo modelo;
 	
-	@ManyToOne
-	private Versao versao;
+	private int quantidadePortas;
+
+	private Cambio cambio;
 
 	public long getId() {
 		return id;
@@ -53,12 +54,20 @@ public class Versao {
 		this.modelo = modelo;
 	}
 
-	public Versao getVersao() {
-		return versao;
+	public int getQuantidadePortas() {
+		return quantidadePortas;
 	}
 
-	public void setVersao(Versao versao) {
-		this.versao = versao;
+	public void setQuantidadePortas(int quantidadePortas) {
+		this.quantidadePortas = quantidadePortas;
+	}
+
+	public Cambio getCambio() {
+		return cambio;
+	}
+
+	public void setCambio(Cambio cambio) {
+		this.cambio = cambio;
 	}
 	
 	

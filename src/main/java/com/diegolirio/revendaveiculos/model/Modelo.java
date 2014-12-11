@@ -15,6 +15,9 @@ public class Modelo {
 	
 	@ManyToOne
 	private Marca marca;
+
+	@ManyToOne
+	private Tipo tipo;
 	
 //	@ManyToOne
 //	private Tipo tipo;
@@ -41,6 +44,14 @@ public class Modelo {
 
 	public void setMarca(Marca marca) {
 		this.marca = marca;
+	}
+
+	public Tipo getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;		
 	}
 
 //	public Tipo getTipo() {

@@ -23,3 +23,10 @@ Revenda de Veiculos - Projeto TCC
 
 - MVC 
   - view ==> controller ==> service ==> dao ==> database
+  
+  # Alteracoes de BD
+  
+  - persistence.xml add o persistence-unit do BD 
+  - servlet-context.xml add o DataSource do BD
+  - AbstractGenericDao no @PersistenceContext(unitName="mysql_r") do EntityManager 
+     alterar o unitName para o nome do persistence.xml adicionado! 

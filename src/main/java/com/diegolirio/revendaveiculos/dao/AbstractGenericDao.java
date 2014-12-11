@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public class AbstractGenericDao<T> {
 
-	@PersistenceContext(unitName="mysql_r")
+	@PersistenceContext(unitName="oracle_r")
 	private EntityManager manager;
 	
 	public T get(Class<T> typeClass, long id) {

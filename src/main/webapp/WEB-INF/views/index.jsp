@@ -55,20 +55,6 @@
                 <li class="divider"></li>
                 <li><a href="../cerulean/">Cerulean</a></li>
                 <li><a href="../cosmo/">Cosmo</a></li>
-                <li><a href="../cyborg/">Cyborg</a></li>
-                <li><a href="../darkly/">Darkly</a></li>
-                <li><a href="../flatly/">Flatly</a></li>
-                <li><a href="../journal/">Journal</a></li>
-                <li><a href="../lumen/">Lumen</a></li>
-                <li><a href="../paper/">Paper</a></li>
-                <li><a href="../readable/">Readable</a></li>
-                <li><a href="../sandstone/">Sandstone</a></li>
-                <li><a href="../simplex/">Simplex</a></li>
-                <li><a href="../slate/">Slate</a></li>
-                <li><a href="../spacelab/">Spacelab</a></li>
-                <li><a href="../superhero/">Superhero</a></li>
-                <li><a href="../united/">United</a></li>
-                <li><a href="../yeti/">Yeti</a></li>
               </ul>
             </li>
             <li>
@@ -93,8 +79,24 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
-            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Cadastros <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="/">Veículos</a></li>
+                <li class="divider"></li>
+                <li><a href="${pageContext.request.contextPath}/#/marca/get/list">Marcas</a></li>
+              </ul>
+            </li>             
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
+				 <img src="#"/> <span class="caret"></span>
+			  </a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="#">Perfil</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Sair</a></li>
+              </ul>
+            </li> 			
           </ul>
 
         </div>

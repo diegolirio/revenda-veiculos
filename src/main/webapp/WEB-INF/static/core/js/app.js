@@ -7,6 +7,7 @@ $app.config(function($routeProvider) {
 		when('/veiculo/:id', {controller: viewController, templateUrl: '/revendaveiculos/view'}).
 		
 		when('/marca/get/list', {controller: marcaListController, templateUrl: '/revendaveiculos/marca/get/list'}).
+		when('/marca/:id',      {controller: marcaController,     templateUrl: '/revendaveiculos/marca/view'}).
 		
 		otherwise({redirectTo:'/'});
 	
@@ -33,11 +34,14 @@ function viewController($scope, $location, $routeParams) {
 	 };
 }
 
-function marcaListController($scope, $location, $routeParams) {
-
-	// get no servidor...
-	$scope.marcas = [{id: 1, descricao: 'Fiat'}, {id: 2, descricao: 'Honda'}];
-	
+function marcaListController($scope, $location, $routeParams, $http) {
+	$http.get('/revendaveiculos/marca/get/list/json').success(function(data){
+		$scope.marcas = data; 
+	});	
 }
 
-
+function marcaController($scope, $location, $routeParams, $http) {
+	$http.get('/revendaveiculos/marca/'+$routeParams.id+"/json").success(function(data){
+		$scope.marca = data; 
+	});	
+}

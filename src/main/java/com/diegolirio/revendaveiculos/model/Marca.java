@@ -12,6 +12,8 @@ public class Marca {
 	
 	private String descricao;
 
+	private String uriImage;
+
 //	@OneToMany(mappedBy="marca")
 //	private Set<Modelo> modelos;
 	
@@ -29,6 +31,14 @@ public class Marca {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public String getUriImage() {
+		return uriImage;
+	}
+
+	public void setUriImage(String uriImage) {
+		this.uriImage = uriImage;
 	}
 
 //	public Set<Modelo> getModelos() {

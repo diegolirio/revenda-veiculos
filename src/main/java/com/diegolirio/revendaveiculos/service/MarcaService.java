@@ -21,5 +21,9 @@ public class MarcaService {
 	public void save(Marca marca) {
 		this.marcaDao.save(marca);
 	}
+
+	public Marca get(long id) {
+		return this.marcaDao.get(Marca.class, id);
+	}
 	
 }

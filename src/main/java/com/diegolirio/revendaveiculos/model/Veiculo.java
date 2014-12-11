@@ -45,6 +45,8 @@ public class Veiculo {
 	@OneToMany(mappedBy="veiculo")
 	private List<Foto> fotos;
 
+	private double valorVenda;
+
 	public long getId() {
 		return id;
 	}
@@ -147,6 +149,14 @@ public class Veiculo {
 
 	public void setFotos(List<Foto> fotos) {
 		this.fotos = fotos;
+	}
+
+	public double getValorVenda() {
+		return valorVenda;
+	}
+
+	public void setValorVenda(double valorVenda) {
+		this.valorVenda = valorVenda;		
 	}
 	
 	
